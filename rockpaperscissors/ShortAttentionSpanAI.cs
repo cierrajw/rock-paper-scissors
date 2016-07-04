@@ -8,14 +8,32 @@ namespace RockPaperScissors
 {
     class ShortAttentionSpanAI : IPlayer
     {
+        //Random random = new Random();
+        int opponentMove;
         public int NextMove()
         {
-            throw new NotImplementedException();
+                     
+            //gets previous move of opponent and plays the move that would beat them
+            if(opponentMove == 0)
+            {
+                return 1;
+            }
+            else if(opponentMove == 1)
+            {
+                return 2;
+            }
+            else
+            {
+                return 0;
+            }   
+             
         }
 
         public void SaveResult(int myMove, int otherMove)
         {
-            throw new NotImplementedException();
+            opponentMove = otherMove;
+
         }
+
     }
 }

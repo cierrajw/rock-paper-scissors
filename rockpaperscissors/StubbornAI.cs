@@ -4,9 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RockPaperScissors
+namespace RockPaperScissors 
 {
-    class StubbornAI
+    class StubbornAI : IPlayer
     {
+        Random random = new Random();
+
+        public int FavoriteMove { get; private set; } 
+
+        public int NextMove()
+        {
+            return FavoriteMove;
+        }
+
+        public void SaveResult(int myMove, int otherMove)
+        {
+            //throw new NotImplementedException();C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\rock-paper-scissors\RockPaperScissors\RandomAI.cs
+        }
+
+        public StubbornAI(int favoriteMove)
+        {
+            FavoriteMove = favoriteMove;
+        }
+
     }
 }
